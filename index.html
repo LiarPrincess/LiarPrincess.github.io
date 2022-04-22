@@ -14,35 +14,27 @@
     }
 
     body {
-      text-rendering: optimizeLegibility;
+      font-size: 1.2em;
+      line-height: 1.4em;
       font-family: "Iowan Old Style", Georgia, serif;
-      font-size: 1.5em;
-      line-height: 1.5em;
+      text-rendering: optimizeLegibility;
       background: #fff;
       color: #222;
     }
-
-    @media (max-width: 576px) {
-      body {
-        font-size: 1.2em;
-      }
-    }
-
-    /* Dark mode looks ugly :/ */
-    /*
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: #111;
-        color: #ddd;
-      }
-    }
-    */
 
     .content {
       max-width: 800px;
       padding: 0;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    @media (max-width: 576px) {
+      .content {
+        max-width: none;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+      }
     }
 
     article {
@@ -60,15 +52,15 @@
       padding-bottom: 0;
     }
 
-    a {
-      background-color: transparent;
-      color: #85CBE3;
-      text-decoration: underline;
+    h2 {
+      font-weight: bold;
+      font-size: 1.2em;
     }
 
-    b,
-    strong {
-      font-weight: bolder;
+    a {
+      background-color: transparent;
+      color: #2695fc;
+      text-decoration: underline;
     }
 
     ul {
@@ -113,75 +105,135 @@
     </article>
 
     <article>
+      Soon I will be <b>looking for a new job</b>, so if you need a talented developer
+      (or know somebody who needs one) then feel free to
+      <a href="mailto:mail@liarprincess.me">contact me</a>.
+      I'm thankful for any referrals (many companies also give a bonus to the person who made the reference).
+    </article>
+
+    <article>
       I also do a lot of sewing and crocheting, but nothing that you would find on this side of the internet.
     </article>
 
     <article>
-      Soon I will be <b>looking for a new job</b>, so if you need a talented developer
-      (or know somebody who needs one) then feel free to
-      <a href="mailto:mail@liarprincess.me">contact me</a>.
-      I'm thankful for any referrals (many companies also give a bonus to the referent).
-    </article>
-
-    <article>
-      <h3><b>5 years of experience</b></h3>
+      <h2>5 years of experience</h2>
       <ul>
         <li>Mostly in big ERP systems in <code>C#</code> and <code>MSSQL</code>.</li>
-        <li>A lot of work on testing, including writing a custom integration test engine that shortened the testing phase from 3h of manual work to 30s.</li>
-        <li>Main developer on the major re-write on a project that payed the bills of the entire department (later we learned that <em>it was not a joke</em>).</li>
-        <li>Once I wrote a driver for a payment terminal!</li>
-        <li>Nothing open-source because that was the company policy, though I wrote <a href="https://github.com/LiarPrincess/Toggl-Jira">Toggl-Jira
-            sync</a> which later became a company standard.</li>
-      </ul>
-    </article>
-
-    <article>
-      <h3><b>MSc in computer science</b></h3>
-      <ul>
-        <li>Final grade “5.0 - very good” (best possible).</li>
-        <li>Multiple scholarships through the whole education process.</li>
-        <li>Thesis: <em>“Digital signal processing for music transcription”</em> - converter from <code>.mp3</code> file to chords/tabs (like <a href="https://supermegaultragroovy.com/products/capo/">Capo</a>). Trained on The Beatles corpus from <a href="https://www.music-ir.org/mirex/wiki/MIREX_HOME">Music Information Retrieval Evaluation eXchange</a>, did not start in the challenge though.</li>
-      </ul>
-    </article>
-
-    <article>
-      <h3><b>Open source</b></h3>
-      <ul>
+        <li>Author of a custom integration test engine that <b>shortened the testing phase from 3h of manual work to 30s</b>.</li>
         <li>
-          <p><a href="https://github.com/LiarPrincess/Violet">Violet - Python VM written in Swift</a></p>
+          Introduced unit testing and
+          <a href="https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)">hexagonal architecture</a>
+          to existing code base that consisted of millions of lines of code.
+        </li>
+        <li>
+          I wrote <a href="https://github.com/LiarPrincess/Toggl-Jira">Toggl-Jira sync</a> to automate time tracking.
+          It improved the precision and ease-of-use so much, that later <b>it became required by management</b>.
+        </li>
+        <li>Main developer on the major re-write on a project that payed the bills of the entire department.</li>
+        <li>Once I wrote a driver for a payment terminal!</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>MSc in computer science</h2>
+      <ul>
+        <li>Final grade <b>“5.0 - very good”</b> (best possible).</li>
+        <li>Multiple <b>scholarships</b> through the whole education process.</li>
+        <li>Master thesis: <i>“Digital signal processing for music transcription”</i> - <b>converter from <code>.mp3</code> file to guitar tabs</b> (like <a href="https://supermegaultragroovy.com/products/capo/">Capo</a>).
           <ul>
-            <li>Implements most of the features from Python 3.7 - missing <code>yield</code>, <code>async/await</code> and comprehensions.</li>
-            <li>One of the biggest open-sourced Swift repositories in terms of scope and lines-of-code.</li>
-            <li>Custom <code>BigInt</code> type that uses some advanced Swift features like tagged pointers and <code>ManagedBufferPointer</code> (design is similar to <code>smi</code> in <a href="https://github.com/v8/v8">V8</a>, though they do that on the pointer-to-js-object level).</li>
+            <li>
+              Written in Swift using
+              <a href="https://developer.apple.com/documentation/accelerate/vdsp">Accelerate vDSP</a>,
+              <a href="https://en.wikipedia.org/wiki/Constant-Q_transform">constant-Q transform</a>
+              and
+              <a href="https://en.wikipedia.org/wiki/Recurrent_neural_network">recurrent neural network</a>.
+            </li>
+            <li>
+              Trained on The Beatles corpus from <a href="https://www.music-ir.org/mirex/wiki/MIREX_HOME">Music Information Retrieval Evaluation eXchange</a>.
+            </li>
+            <li>Graded 5.0.</li>
           </ul>
         </li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>Open source</h2>
+      <ul>
         <li>
           <p><a href="https://apps.apple.com/pl/app/wroclive/id1533532240">Wroclive - Real-time public transport in Wrocław</a></p>
           <ul>
-            <li>iOS app that shows real-time locations of trams/buses in my local city.</li>
-            <li>Sends push notifications for all of the “tree is blocking the road, so the replacement bus was dispatched” events.</li>
-            <li>Used daily by ~5000 people.</li>
-            <li>#71 in “Navigation” category in polish AppStore (which is pretty nice for an app that supports only 1 city).</li>
-            <li>Fully open-sourced: <a href="https://github.com/LiarPrincess/Wroclive-client">client</a>/<a href="https://github.com/LiarPrincess/Wroclive-server">server</a>.</li>
+            <li>iOS app that shows <b>real-time locations of trams/buses</b> in my local city.</li>
+            <li>With <b>push notifications</b>, for example: “Tree is blocking the Grabiszyńska street. Trams 4, 5, 11 will go through Powstańców, a replacement bus was dispatched.”.</li>
+            <li>Used daily by <b>~5000 people</b>.</li>
+            <li><b>#71 in “Navigation”</b> category in the polish AppStore (which is pretty nice for an app that supports only 1 city).</li>
+            <li>Fully open-sourced:</li>
+            <ul>
+              <li>
+                <a href="https://github.com/LiarPrincess/Wroclive-client">Wroclive-client</a> - written in Swift with redux for state management.
+              </li>
+              <li>
+                <a href="https://github.com/LiarPrincess/Wroclive-server">Wroclive-server</a> - TypeScript app hosted on GCP, optimised for cost ($0.05 per month).
+              </li>
+            </ul>
           </ul>
         </li>
+
+        <li>
+          <p><a href="https://github.com/LiarPrincess/Violet">Violet - Python VM written in Swift</a></p>
+          <ul>
+            <li>
+              Implementation of <b>Python 3.7</b> - missing only <code>yield</code>, <code>async/await</code> and comprehensions.
+              <a href="https://github.com/LiarPrincess/Violet/tree/main/PyTests/RustPython">Tests written in Python that we pass.</a>
+            </li>
+            <li>
+              Uses
+              <a href="https://github.com/LiarPrincess/Violet/tree/main/Sources/Parser">recursive descent parser</a>,
+              custom
+              <a href="https://github.com/LiarPrincess/Violet/blob/main/Sources/Bytecode/Generated/Instructions.swift">bytecode</a>
+              and
+              <a href="https://github.com/LiarPrincess/Violet/blob/d1126c653eae04396624b98ebfec247f953a406a/Sources/Objects/Generated/Py%2BGenerated.swift#L60">a</a>
+              <a href="https://github.com/LiarPrincess/Violet/blob/d1126c653eae04396624b98ebfec247f953a406a/Sources/Objects/Generated/Types%2BGenerated.swift#L4151">lot</a>
+              <a href="https://github.com/LiarPrincess/Violet/blob/d1126c653eae04396624b98ebfec247f953a406a/Sources/Objects/Types%20-%20code/PyFrame%2BFastLocalsCellFreeBlockStackStorage.swift#L15">of</a>
+              pointer arithmetic.
+            </li>
+            <li>Custom <b><code>BigInt</code> type</b> that uses some advanced Swift features like tagged pointers and <code>ManagedBufferPointer</code> (design is similar to <code>smi</code> in <a href="https://github.com/v8/v8">V8</a>, though they do that on the pointer-to-js-object level).</li>
+            <li>Reported <a href="https://github.com/python/cpython/issues/91399">bpo 47243</a> to CPython implementation.</li>
+            <li>One of the biggest open-sourced Swift repositories in terms of scope and lines-of-code.</li>
+            <li>Other things include:</li>
+            <ul>
+              <li>
+                <a href="https://github.com/LiarPrincess/Violet/tree/main/Elsa%20definitions">Elsa</a> - tiny declarative language for code generation.
+              </li>
+              <li>
+                <a href="https://github.com/LiarPrincess/Violet/blob/main/Sources/Rapunzel/Rapunzel.swift">Rapunzel</a> - implementation of
+                “<a href="https://homepages.inf.ed.ac.uk/wadler/papers/prettier/prettier.pdf">A prettier printer</a>” by Philip Wadler,
+                used for printing
+                <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">abstract syntax tree</a>
+                (with trampoline, to prevent blowing up the stack).
+              </li>
+              <li>
+                custom <a href="https://github.com/LiarPrincess/Violet/tree/main/Sources/UnicodeData">Unicode library</a>.
+              </li>
+            </ul>
+          </ul>
+        </li>
+
         <li>
           <p><a href="https://github.com/LiarPrincess/Swift-plays-Pokemon">Swift plays Pokemon - Game Boy emulator</a></p>
           <ul>
             <li>Runs “Tetris”, “Pokemon”, “Legend of Zelda - The Links Awakening” and a few other titles.</li>
-            <li>Safe from <em>Meltdown</em> and <em>Spectre</em>.</li>
           </ul>
         </li>
       </ul>
     </article>
 
     <article>
-      <h3><b>Other</b></h3>
+      <h2>Other</h2>
       <ul>
         <li>🇵🇱 PL citizenship, happy to reallocate.</li>
-        <li>I can reverse a linked list! But only a doubly linked list though.</li>
+        <li>🧵🧶 Currently an owner of a small non-IT related business.</li>
       </ul>
-      <p>Currently an owner of a small non-IT related business 🧵🧶, but as it turns out that does not go well with <em>current word situation</em>.</p>
     </article>
 
     <footer>
